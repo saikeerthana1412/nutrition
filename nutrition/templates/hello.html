@@ -69,7 +69,7 @@
         <!-- <img src="{%static 'img/bd.jpg'%}" width="300" height="200" align="middle" > -->
         <br>
         <br>
-    <form> 
+    <form action="submitrequest"> 
         <h5 class="x">DAILY REQUIRED NUTRIENTS &nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
@@ -83,8 +83,8 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp;
-         &nbsp;    <label>brown rice (100gms):</label> &nbsp;<input type="number"/>  
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salmon (100gms):&nbsp;<input type="number"/>        <br>
+         &nbsp;    <label>brown rice (100gms):</label> &nbsp;<input type="number" name="brown_rice"/>  
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salmon (100gms):&nbsp;<input type="number" name="salmon"/>        <br>
          <br>
         
         Protiens&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;      : 63-219 grams &nbsp;&nbsp;
@@ -94,8 +94,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
         &nbsp; &nbsp; &nbsp;
-        <label>oats (50gms):</label>  &nbsp;<input type="number"/> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eggs (200gms): &nbsp;<input type="number"/><br>
+        <label>oats (50gms):</label>  &nbsp;<input type="number" name="oats"/> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eggs (200gms): &nbsp;<input type="number" name="eggs"/><br>
         <br>
         
         Fats &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;         : 62-109 grams&nbsp;&nbsp;
@@ -104,8 +104,8 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>Quinoa (40gms):&nbsp;</label>&nbsp;<input type="number"/> 
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;olive oil (37gms):&nbsp; <input type="number"/> <br>
+         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>Quinoa (40gms):&nbsp;</label>&nbsp;<input type="number" name="quinoa"/> 
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;olive oil (37gms):&nbsp; <input type="number" name="olive_oil"/> <br>
          <br>
         
         Iron &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;          : 14-31 mgrams&nbsp;&nbsp;
@@ -113,8 +113,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp; &nbsp;   <label>whole wheat bread (100gms): </label> &nbsp;  <input type="number"/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;coconut oil (28gms):&nbsp; <input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp; &nbsp;   <label>whole wheat bread (100gms): </label> &nbsp;  <input type="number" name="whole_wheat_bread"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;coconut oil (28gms):&nbsp; <input type="number" name="cocnut_oil"/><br>
         <br>
         
         Fiber &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 28-42 grams&nbsp;&nbsp;
@@ -122,8 +122,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>whole wheat pasta (75gms):</label>&nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;broccoli (78gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>whole wheat pasta (75gms):</label>&nbsp; &nbsp;<input type="number" name="whole_wheat_pasta"/>
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;broccoli (78gms): &nbsp;<input type="number" name="broccoli"/><br>
         <br>
 
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
@@ -133,8 +133,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>chick peas (150gms):</label>&nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; bellpepper (100gms):  &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>chick peas (150gms):</label>&nbsp; &nbsp;<input type="number" name="chick_peas"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; bellpepper (100gms):  &nbsp;<input type="number" name="bellpepper"/><br>
         <br>
 
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
@@ -145,8 +145,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <label>black beans (25gms):</label>&nbsp;&nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tomato (100gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <label>black beans (25gms):</label>&nbsp;&nbsp;<input type="number" name="black_beans"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tomato (100gms): &nbsp;<input type="number" name="tomato"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -157,8 +157,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>kidney beans(100gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carrot (80gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>kidney beans(100gms):</label> &nbsp; &nbsp;<input type="number" name="kidney_beans"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carrot (80gms): &nbsp;<input type="number" name="carrot"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -169,8 +169,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>lentils (60gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;sweet potatoes (100gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>lentils (60gms):</label> &nbsp; &nbsp;<input type="number" name="lentils"/>
+        &nbsp;sweet potatoes (100gms): &nbsp;<input type="number" name="sweet_potatoes"/><br>
         <br>
     
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -181,8 +181,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>almonds (30gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;spinach (100gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>almonds (30gms):</label> &nbsp; &nbsp;<input type="number" name="almonds"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;spinach (100gms): &nbsp;<input type="number" name="spinach"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -193,8 +193,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>walnuts (30gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; banana (100gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>walnuts (30gms):</label> &nbsp; &nbsp;<input type="number" name="walnuts"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; banana (100gms): &nbsp;<input type="number" name="banana"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -205,8 +205,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>chia seeds (20gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; apple (54gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>chia seeds (20gms):</label> &nbsp; &nbsp;<input type="number" name="chia_seeds"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; apple (54gms): &nbsp;<input type="number" name="apple"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -217,8 +217,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>flax seeds (28gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;orange (150gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>flax seeds (28gms):</label> &nbsp; &nbsp;<input type="number" name="flax_seeds"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;orange (150gms): &nbsp;<input type="number" name="orange"/><br>
         <br>
     
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -229,8 +229,22 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>peanuts (42gms):</label> &nbsp; &nbsp;<input type="number"/>
-         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; grapes (140gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>peanuts (42gms):</label> &nbsp; &nbsp;<input type="number" name="peanuts"/>
+         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; grapes (140gms): &nbsp;<input type="number" name="grapes"/><br>
+        <br>
+
+        
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>paneer (100gms):</label> &nbsp; &nbsp;<input type="number" name="paneer"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;avacado (50gms): &nbsp;<input type="number" name="avacado"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -241,8 +255,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>paneer (100gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;avacado (50gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>milk (249gms):</label> &nbsp; &nbsp;<input type="number" name="milk"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;lemons (100gms): &nbsp;<input type="number" name="lemons"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -253,8 +267,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>milk (249gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;lemons (100gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>cheese (42gms):</label> &nbsp; &nbsp;<input type="number" name="cheese"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; kiwi (140gms): &nbsp;<input type="number" name="kiwi"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -265,8 +279,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>cheese (42gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; kiwi (140gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>yogurt (250gms):</label> &nbsp; &nbsp;<input type="number" name="yogurt"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;papaya (100gms): &nbsp;<input type="number" name="papaya"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -277,8 +291,8 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>yogurt (250gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;papaya (100gms): &nbsp;<input type="number"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>chicken (100gms):</label> &nbsp; &nbsp;<input type="number" name="chicken"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;peas (150gms): &nbsp;<input type="number" name="peas"/><br>
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -289,19 +303,7 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>chicken (100gms):</label> &nbsp; &nbsp;<input type="number"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;peas (150gms): &nbsp;<input type="number"/><br>
-        <br>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>sprouts (100gms):</label> &nbsp; &nbsp;<input type="number"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>sprouts (100gms):</label> &nbsp; &nbsp;<input type="number" name="sprouts"/>
         
        </p>
 
@@ -316,12 +318,12 @@
        </p>
         
        
-        
+       
         
     </form>
         
         <br>
-     <img src="{%static 'img/A healthy.png'%}" width="500" height="500" align="middle" />
+        <img src="{%static 'img/A healthy.png'%}" width="500" height="500" align="middle" />
         <!-- <img class="image" src="{%static 'img/facts.jpeg'%}" width="500" height="500" align="right"> -->
 
     </p>
