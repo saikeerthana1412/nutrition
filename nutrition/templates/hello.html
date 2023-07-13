@@ -69,7 +69,8 @@
         <!-- <img src="{%static 'img/bd.jpg'%}" width="300" height="200" align="middle" > -->
         <br>
         <br>
-    <form action="submitrequest"> 
+    <form action="/submitrequest/" method="POST"> 
+        {% csrf_token %}
         <h5 class="x">DAILY REQUIRED NUTRIENTS &nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
@@ -114,7 +115,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp; &nbsp;   <label>whole wheat bread (100gms): </label> &nbsp;  <input type="number" name="whole_wheat_bread"/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;coconut oil (28gms):&nbsp; <input type="number" name="cocnut_oil"/><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;coconut oil (28gms):&nbsp; <input type="number" name="coconut_oil"/><br>
         <br>
         
         Fiber &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 28-42 grams&nbsp;&nbsp;
@@ -134,7 +135,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>chick peas (150gms):</label>&nbsp; &nbsp;<input type="number" name="chick_peas"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; bellpepper (100gms):  &nbsp;<input type="number" name="bellpepper"/><br>
+        &nbsp;&nbsp; &nbsp; &nbsp; bellpepper (100gms):  &nbsp;<input type="number" name="bell_pepper"/><br>
         <br>
 
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
