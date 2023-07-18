@@ -1,10 +1,27 @@
-ffrom django.shortcuts import render
+from django.shortcuts import render
 from django.http import HttpResponse
 #from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from . import forms
+
 
 from django.template import loader
+import pandas as pd
+from scipy.optimize import linprog
+from sqlalchemy import create_engine
+import pymysql
+from tabulate import tabulate
+from itertools import zip_longest
+import mysql.connector
+
+#database connection
+engine = create_engine('mysql+pymysql://localhost')
+
+db = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="nutrient_sources"
+)
 
 #action
 
@@ -14,6 +31,48 @@ def say_hello(request):
     template = loader.get_template('hello.html')
    
     return HttpResponse(template.render())
+
+def optimize():
+
+	#converts table to dataframe
+	sources = pd.read_sql_query('SELECT * FROM `nutrients_info`', con=db)
+
+	#linprog function
+	names = sources["SOURCES"].to_numpy()
+	fats = sources["Fats"].to_numpy()
+	carb = sources["Carbohydrates"].to_numpy()
+	prot = sources["Protiens"].to_numpy()
+	fiber = sources["Fiber"].to_numpy()
+	neg = -1
+	cal = sources["Calories"].to_numpy()
+
+	#equations
+	obj = sources["Price"].to_numpy()
+
+	lhs_eq = [cal]
+	rhs_eq = [2500]
+
+	lhs_ineq = [fats, fats*neg, carb, carb*neg, prot, prot*neg, fiber, fiber*neg]
+	rhs_ineq = [109, -62, 406, -281, 219, -63, 42, -28]
+
+	bnd = (0,float("inf"))
+
+	opt = linprog( c=obj, A_ub=lhs_ineq, b_ub=rhs_ineq, A_eq=lhs_eq, b_eq=rhs_eq, bounds=bnd)
+
+	#print(opt.fun) optimized total price
+
+	#presentable result
+	round_to_tenths = [round(num, 1) for num in opt.x] 
+	opt_list=zip(names, round_to_tenths,obj,round_to_tenths*obj)
+	filtered_data = [row for row in iter(opt_list) if row[1] > 0]
+	# print(filtered_data)
+	table = (tabulate(filtered_data, headers=['Name', 'optimised_quantity','prices','total']))
+	
+	return table
+
+
+
+
 @csrf_exempt
 def submit_request(request):
     #if request.method == "POST":
@@ -58,14 +117,26 @@ def submit_request(request):
         s38=request.POST.get('peas')
         s39=request.POST.get('sprouts')
 
-        list1=[s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,s26,s27,s28,s29,
+        p=[s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,s24,s25,s26,s27,s28,s29,
            s30,s31,s32,s33,s34,s35,s36,s37,s38,s39]
         
         list2=['brown_rice','oats','quinoa','whole_wheat_bread','whole_wheat_pasta','chickpeas',
                      'black_beans','kidney_beans','lentils','almonds','walnuts','chia_seeds','flax_seeds','peanuts','paneer','milk','cheese',
                       'yogurt','chicken','salmon','eggs','olive_oil','coconut_oil','broccoli','bell_pepper','tomato','carrot','sweet_potatoes',
                       'spinach','banana','apple','orange','grapes','avacado','lemons','kiwi','papaya','peas','sprouts']
-        res = {list2[i]: list1[i] for i in range(len(list2))}
+        res = {list2[i]: p[i] for i in range(len(list2))}
+
+        mycursor = db.cursor()
+
+	#or put new inputed array here    
+        
+
+        for x in range(39):
+            sql = "UPDATE nutrients_info SET Price = %s WHERE ID = %s"
+            val = (p[x], x+1)
+            mycursor.execute(sql, val)
+            db.commit()
+
         # n=len(list2)
         # for i in range(0,n):
         #     if list1[i] is None:
@@ -73,15 +144,19 @@ def submit_request(request):
         #     else:
         #         res={list2[i]:list1[i]}
         #responce=JsonResponse(res, safe=False)
+        #upadate_prices()
         template=loader.get_template('base.html')
         context={
-              'display' : res
+              'display' : res,
+              'my_text': optimize()
         }
         
         
         
         #html = "<html><body>PRICES<br> %s.</body></html>" %res
         return HttpResponse(template.render(context, request))
+
+
     
 def facts(request):
     # html= "<html><style>h1{background-color: rgb(138, 166, 95); color: white;  }</style><body><h1><br>Did You Know???<br></h1>  <p></p>   </body></html>"
