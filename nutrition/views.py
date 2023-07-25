@@ -13,6 +13,9 @@ from tabulate import tabulate
 from itertools import zip_longest
 import mysql.connector
 
+def welcome(request):
+    template=loader.get_template('frst.html')
+    return HttpResponse(template.render()) 
 #database connection
 engine = create_engine('mysql+pymysql://localhost')
 
@@ -67,9 +70,7 @@ def optimize():
 	filtered_data = [row for row in iter(opt_list) if row[1] > 0]
 	# print(filtered_data)
 	table = (tabulate(filtered_data, headers=['Name', 'optimised_quantity','prices','total']))
-	
 	return table
-
 
 
 
@@ -136,7 +137,7 @@ def submit_request(request):
             val = (p[x], x+1)
             mycursor.execute(sql, val)
             db.commit()
-
+        tt=optimize()
         # n=len(list2)
         # for i in range(0,n):
         #     if list1[i] is None:
@@ -148,7 +149,7 @@ def submit_request(request):
         template=loader.get_template('base.html')
         context={
               'display' : res,
-              'my_text': optimize()
+              'my_text': tt
         }
         
         
