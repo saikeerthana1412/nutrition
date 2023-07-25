@@ -1,6 +1,9 @@
 {%load static%}
 <title>Healthy World</title>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <style>  
     .text{
         text-align: center;
@@ -17,7 +20,7 @@
         text-align: center;
         font-size: xx-large;
         font-style: normal;
-        color:rgb(237, 241, 202);
+        color:rgb(248, 175, 235);
     }     
     .he{
         text-align: middle;
@@ -32,10 +35,10 @@
         font-style: italic;
     }
     .x{
-        text-align: left;
-        font-size: larger;
+        text-align: center;
+        font-size: x-large;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-style: italic; 
+         
     }
     .image{
         float: right;
@@ -46,98 +49,171 @@
         width: 350px;
     }
     .hey{
-        text-align: left;
+        text-align: center;
         font-size: medium;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
     .center{
         display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
+  float: left;
     }
     .k{
-        background-color: rgb(138, 166, 95);
+        background-color: linear-gradient(to right, rgb(222, 47, 138), rgb(138, 66, 137),rgb(108, 32, 104) );
+
 
     }
+    .end{
+        display: block;
+  margin-left: auto;
+  
+  width: 30%
+    }
 
+    .mb{
+        background-color: rgb(15, 136, 53);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 2px 4px;
+  cursor: pointer;
+    }
+    video{
+        float:left;
+    }
 </style>
-<body style="background-image: url('{%static 'img/bg2.png'%}'); background-repeat: repeat-y;" align="top" >
-    <div class="k">
-        <br>
+<!-- <body style="background-image: url('{%static 'img/Untitled design (6).png'%}'); " align="top " > -->
+<body >
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="padding:15px; background-color: linear-gradient(to right, rgb(222, 47, 138), rgb(138, 66, 137),rgb(108, 32, 104) ); font-size:20px;">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/submitrequest/_facts/">LearnMore?</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="https://www.healthifyme.com/blog/the-ultimate-7-day-gym-diet-plan/">Fitness</a>
+          </li> -->
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+            <a class="nav-link"><img style="width:30px; height:30px;" class="i" src="{%static "img/Healthy World.png"%}"></a>
+          </li>
+        <ul>
+
+        </ul>
+      </nav>
+      <br>
+      <h2 style="text-align:center; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color:rgb(76, 210, 101);">Healthy World</h2>
+      <!-- <p class="hey">
+      <marquee  style="font-size: larger; font-weight:800; background-color: rgb(142, 27, 109); color:rgb(248, 175, 235)" >
+        Healthy World
+    </marquee>
+    </p> -->
+    <!-- <div class="k">
+
         <h1 class="Kee">&nbsp;Cost Efficient Nutrition Meals</h1>
 
     </div>
     
-    <p class="hey">
-        <marquee style="font-size: larger; font-weight:800; background-color:rgb(183, 198, 183); color:rgb(237, 243, 215)">
-        Healthy World
-    </marquee>
-    <br>
+    <p class="hey"></p>
     <p class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   We analyze daily nutritional requirements for you and provide meal plan in optimized
-            cost.<br></p>
-            <br>
+            cost.
+        </p>-->
+           <center>
+            <video controls autoplay muted width="390" height="310" align="center" >
+                <source src="{% static "img/pexels-nikolay-bondarev-8212559 (1080p).mp4"%}"  type="video/mp4"><source> 
+            </video>
+           </center>
+           <br>
+           <br>
+
+           <p class="x">&nbsp;&nbsp;&nbsp;DAILY REQUIRED NUTRIENTS </p><br>
+           <p class="hey">
+            &nbsp;&nbsp;&nbsp;            Carbohydrates&nbsp; : 281-406 grams<br>
+            &nbsp;&nbsp;&nbsp;            Protiens&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;      : 63-219 grams<br>
+            &nbsp;&nbsp;&nbsp;            Fats &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;         : 62-109 grams<br>
+            &nbsp;&nbsp;&nbsp;            Iron &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;          : 14-31 mgrams<br>
+            &nbsp;&nbsp;&nbsp;            Fiber &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 28-42 grams<br>
+           </p>
+            <!-- <img src="{%static 'img/Untitled design (7).png'%}" width="400" height="400" class="end" /> -->
         
-        <img src="{%static 'img/A healthy (1) copy.png'%}" width="400" height="400" class="center" />
-        </p>
+    
         <!-- <img src="{%static 'img/bd.jpg'%}" width="300" height="200" align="middle" > -->
         <br>
-        <br>
+        <p class="text" >
+            Provide us with the prices of respective items given below
+
+        </p>
+       <br>
     <form action="/submitrequest/" method="POST"> 
         {% csrf_token %}
-        <h5 class="x">DAILY REQUIRED NUTRIENTS &nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;
+        <h4 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ">&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp;   &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
             &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
             &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;                INPUT PRICES:</h5>
+            &nbsp;&nbsp;
+           
+                       INPUT PRICES</h4>
        <p class="hey" > 
-        Carbohydrates&nbsp; : 281-406 grams  &nbsp;&nbsp;
+         &nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
          &nbsp;    <label>brown rice (100gms):</label> &nbsp;<input type="number" name="brown_rice" value="100"/>  
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salmon (100gms):&nbsp;<input type="number" name="salmon" value="100"/>        <br>
          <br>
         
-        Protiens&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;      : 63-219 grams &nbsp;&nbsp;
+         &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
         &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
-        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
         <label>oats (50gms):</label>  &nbsp;<input type="number" name="oats" value="100"/> 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eggs (200gms): &nbsp;<input type="number" name="eggs" value="100"/><br>
         <br>
         
-        Fats &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;         : 62-109 grams&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
          &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<label>Quinoa (40gms):&nbsp;</label>&nbsp;<input type="number" name="quinoa" value="100"/> 
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;olive oil (37gms):&nbsp; <input type="number" name="olive_oil" value="100"/> <br>
          <br>
         
-        Iron &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;          : 14-31 mgrams&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;    &nbsp; &nbsp; &nbsp;   <label>whole wheat bread (100gms): </label> &nbsp;  <input type="number" name="whole_wheat_bread" value="100"/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;coconut oil (28gms):&nbsp; <input type="number" name="coconut_oil" value="100"/><br>
         <br>
         
-        Fiber &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : 28-42 grams&nbsp;&nbsp;
+        &nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>whole wheat pasta (75gms):</label>&nbsp; &nbsp;<input type="number" name="whole_wheat_pasta" value="100"/>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <label>whole wheat pasta (75gms):</label>&nbsp; &nbsp;<input type="number" name="whole_wheat_pasta" value="100"/>
         &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;broccoli (78gms): &nbsp;<input type="number" name="broccoli" value="100"/><br>
         <br>
 
@@ -163,94 +239,42 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <label>black beans (25gms):</label>&nbsp;&nbsp;<input type="number" name="black_beans" value="100"/>
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tomato (100gms): &nbsp;<input type="number" name="tomato" value="100"/><br>
         <br>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>kidney beans(100gms):</label> &nbsp; &nbsp;<input type="number" name="kidney_beans" value="100"/>
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carrot (80gms): &nbsp;<input type="number" name="carrot" value="100"/><br>
+  <img src="{%static 'img/Untitled design (12).png'%}" width="400" height="400" class="center" />
+        
+         
+       
+        
+        <label>kidney beans(100gms):</label> &nbsp; &nbsp;<input type="number" name="kidney_beans" value="100"/>
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carrot (80gms): <input type="number" name="carrot" value="100"/><br>
         <br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>lentils (60gms):</label> &nbsp; &nbsp;<input type="number" name="lentils" value="100"/>
-        &nbsp;sweet potatoes (100gms): &nbsp;<input type="number" name="sweet_potatoes" value="100"/><br>
+        <label>lentils (60gms):</label> &nbsp; &nbsp;<input type="number" name="lentils" value="100"/>
+        &nbsp;sweet potatoes (100gms): <input type="number" name="sweet_potatoes" value="100"/><br>
         <br>
     
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>almonds (30gms):</label> &nbsp; &nbsp;<input type="number" name="almonds" value="100"/>
+        <label>almonds (30gms):</label> &nbsp; &nbsp;<input type="number" name="almonds" value="100"/>
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;spinach (100gms): &nbsp;<input type="number" name="spinach" value="100"/><br>
         <br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>walnuts (30gms):</label> &nbsp; &nbsp;<input type="number" name="walnuts" value="100"/>
+        <label>walnuts (30gms):</label> &nbsp; &nbsp;<input type="number" name="walnuts" value="100"/>
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; banana (100gms): &nbsp;<input type="number" name="banana" value="100"/><br>
         <br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>chia seeds (20gms):</label> &nbsp; &nbsp;<input type="number" name="chia_seeds" value="100"/>
+        <label>chia seeds (20gms):</label> &nbsp; &nbsp;<input type="number" name="chia_seeds" value="100"/>
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; apple (54gms): &nbsp;<input type="number" name="apple" value="100"/><br>
         <br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>flax seeds (28gms):</label> &nbsp; &nbsp;<input type="number" name="flax_seeds" value="100"/>
+        <label>flax seeds (28gms):</label> &nbsp; &nbsp;<input type="number" name="flax_seeds" value="100"/>
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;orange (150gms): &nbsp;<input type="number" name="orange" value="100"/><br>
         <br>
     
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>peanuts (42gms):</label> &nbsp; &nbsp;<input type="number" name="peanuts" value="100"/>
+        <label>peanuts (42gms):</label> &nbsp; &nbsp;<input type="number" name="peanuts" value="100"/>
          &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; grapes (140gms): &nbsp;<input type="number" name="grapes" value="100"/><br>
         <br>
 
         
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -262,7 +286,7 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;avacado (50gms): &nbsp;<input type="number" name="avacado" value="100"/><br>
         <br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -274,7 +298,7 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;lemons (100gms): &nbsp;<input type="number" name="lemons" value="100"/><br>
         <br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -286,7 +310,7 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; kiwi (140gms): &nbsp;<input type="number" name="kiwi" value="100"/><br>
         <br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -298,7 +322,7 @@
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;papaya (100gms): &nbsp;<input type="number" name="papaya" value="100"/><br>
         <br>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -311,14 +335,7 @@
         <br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<label>sprouts (100gms):</label> &nbsp; &nbsp;<input type="number" name="sprouts" value="100"/>
+         &nbsp;<label>sprouts (100gms):</label> &nbsp; &nbsp;<input type="number" name="sprouts" value="100"/>
         
        </p>
 
@@ -329,14 +346,14 @@
         <br>
         <br>
         <p style="text-align: center;">
-        <button type="run">RUN</button>
+        <button class="mb" type="run">Submit</button>
        </p>
         
        
        
         
     </form>
-        
+   
         
         <!-- <img class="image" src="{%static 'img/facts.jpeg'%}" width="500" height="500" align="right"> -->
 
