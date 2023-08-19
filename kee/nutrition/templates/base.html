@@ -1,0 +1,109 @@
+{%load static%}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<title>optimized cost</title>
+<style>
+    .hii{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: justify;
+        text-align: center;
+
+    }
+    h1{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+    }
+    .hey{
+        text-align: justify;
+        font-size: X-large;
+        background-color: rgb(138, 166, 95);
+        color: white;
+        padding: 13px 19px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        
+    }
+    .heyy{
+        text-align: justify;
+        font-size: X-large;
+        background-color: rgb(138, 166, 95);
+        color: white;
+        padding: 13px 19px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        left: 130px;
+    }
+    .container{
+        background-color: rgb(166, 95, 149);
+    }
+    .k{
+        
+       
+    }
+   
+</style>
+
+<body style="background-color:rgba(42, 115, 116, 0.956) " >
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="padding:15px; background-color: linear-gradient(to right, rgb(222, 47, 138), rgb(138, 66, 137),rgb(108, 32, 104) ); font-size:20px;">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/">Home</a>
+          </li>
+          
+          
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="https://www.healthifyme.com/blog/the-ultimate-7-day-gym-diet-plan/">Fitness</a>
+          </li> -->
+        </ul>
+    </nav>
+   
+    <!-- <p class="k">Prices Entered</p>
+<p class="hii" > &nbsp; &nbsp; &nbsp; &nbsp; 
+    {{display}}</p> -->
+    <!-- <img style="float:left; width:500; height:500;" src="{%static "img/Healthy World.png"%}" > -->
+    <br>
+    <br>
+    <h2 class="display-4" style=" text-align: center;
+       
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(232, 237, 237);">Result</h2>
+  <br>
+  <br>
+                 <table border="1" class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            {% for header in my_text.headers %}
+                                <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in my_text.rows %}
+                            <tr>
+                                {% for cell in row %}
+                                    <td>{{ cell }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            <H4 style="color:aliceblue; font-size:x-large" class="lead text-center" >TOTAL PRICE: {{add}}.Rs</H4>
+            <br>
+            <div>
+                <center>
+                    <video controls autoplay muted loop width="340" height="390" style="pointer-events:none;" >
+                        <source src="{% static "img/Healthy world.mp4"%}"  type="video/mp4"><source> 
+                    </video> 
+                </center>
+                
+            </div>   
+</body> 
