@@ -1,1 +1,0 @@
- pipenv --venv --->starting virtual terminal in our environment as required
